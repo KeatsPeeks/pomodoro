@@ -24,7 +24,7 @@ pause();
 
 setInterval(function() {
   refresh()
-}, 100);
+}, 1000);
 
 function initTimer() {
   endTime = new Date().getTime() + steps[currentStep].delay * 60 * 1000;
@@ -36,7 +36,9 @@ function refresh() {
     var mins = Math.floor(t / 60);
     var secs = Math.floor(t - mins * 60);
 
-    document.getElementById("timer").innerHTML = ("0" + mins).slice(-2) + ":" + ("0" + secs).slice(-2);
+    var time = ("0" + mins).slice(-2) + ":" + ("0" + secs).slice(-2)
+    document.getElementById("timer").innerHTML = time;
+    document.title = time;
 
     if (t <= 0) {
       currentStep++;
