@@ -1,12 +1,12 @@
 var params = {
   break: {
     name: "Break",
-    delay: 0.2,
+    delay: 5,
     css: "break"
   },
   work: {
     name: "Work",
-    delay: 0.2,
+    delay: 25,
     css: "work"
   }
 }
