@@ -1,0 +1,123 @@
+html,body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+#step {
+  position: absolute;
+  top: 13%;
+  height: 13%;
+  right: 0;
+  left: 0;
+  display: flex;
+  background-color: rgba(240, 91, 86, 1);
+}
+#step::after {
+  content: " ";
+  height: 100%;
+  position: absolute;
+  left: -25%;
+  top: 0;
+  width: 150%;
+  box-shadow: 0 0 0 1.5vh rgba(240, 91, 86, 0.5);
+}
+.work #step::after {
+  box-shadow: 0 0 0 1.5vh rgba(92, 165, 32, 0.4);
+}
+.break #step::after {
+  box-shadow: 0 0 0 1.5vh rgba(237, 187, 54, 0.4);
+}
+.break #step {
+  background-color: rgba(237, 187, 54, 0.8)
+}
+.work #step {
+  background-color: rgba(92, 165, 32, 0.8);
+}
+
+#steptext {
+  margin: auto;
+  font-size: 10vh;
+  font-style: italic;
+  color: white;
+}
+
+#steptext.animate {
+  animation: scroll 1s;
+}
+
+@keyframes scroll {
+  0%    { transform: translateX(-200%); }
+  100%  { transform: translateX(0%); }
+}
+
+
+#container {
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgba(240, 91, 86, 0.09);
+}
+#container.break {
+  background-color: rgba(237, 187, 54, 0.09);
+}
+#container.work {
+  background-color: rgba(92, 165, 32, 0.09);
+}
+
+.row {
+  flex : 1;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  position: relative;
+}
+
+#timer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+
+  font-weight: bold;
+  font-style: normal;
+  color: #222222;
+  font-size: 12vh;
+}
+
+#buttons {
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
+  padding: 1vh 3vh 1vh 3vh;
+  margin: 0 3vw 0 3vw;
+  cursor: pointer;
+  outline: 0;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc !important;
+  color: #666666;
+  cursor: default;
+  opacity: 1;
+}
+
+#start {
+  background-color: #5ca520;
+}
+
+#pause {
+  background-color: #edbb36;
+
+}
