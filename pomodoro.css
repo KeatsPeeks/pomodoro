@@ -48,7 +48,7 @@ html,body {
 }
 
 @keyframes scroll {
-  0%    { transform: translateX(-200%); }
+  0%    { transform: translateX(-80vw); }
   100%  { transform: translateX(0%); }
 }
 
